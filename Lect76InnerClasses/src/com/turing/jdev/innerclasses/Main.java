@@ -21,7 +21,7 @@ public class Main {
 		
 		
 		// 2. Sample on Local-Classes (tied to a specific block of code)
-		class ClickListener implements Button.OnClickListener{
+		/*class ClickListener implements Button.OnClickListener{
 			
 			public ClickListener(){
 				System.out.println("I've been attached");
@@ -37,12 +37,24 @@ public class Main {
 		// Assuming we have some kind of GUI, like it could be in Android, ClickListener would actually
 		// respond when a click is make in the object
 		btnPrint.setOnClickListener(new ClickListener());
+		listen();*/
+		
+		// 3. Sample about Anonymous classes
+		// this class-object created via the anonymous class is unique to the object to which is assigned
+		btnPrint.setOnClickListener(new Button.OnClickListener() {
+			
+			@Override
+			public void onClick(String title) {
+				System.out.println("Title was clicked!");
+			}
+		});
+		
 		listen();
 		
 	}
 	
 	/**
-	 * As we're not in a GUI, we're gonna simulate the click by input from the keyboard
+	 * As we're not in a GUI, we're going to simulate the click by input from the keyboard
 	 */
 	private static void listen(){
 		boolean quit = false;
