@@ -1,0 +1,10 @@
+Inner classes in java can be of 4 types:
+
+1. Static nested classes : is mainly used to associate a class with its outer class. So it'll be packaged
+in its outer class instead of in the package. Meaning, that it can not access non static methods or members
+or its outer class without first creating an instance of that class.
+
+2. Non-static nested classes (Inner classes). This class can access all method and fields of its outer 
+class, even those marked as private.
+3. Local class: it's an inner class defined inside of scope block (usually a method)
+4. Anonymous class : is a nested class without a class name
